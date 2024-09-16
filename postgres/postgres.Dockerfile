@@ -1,5 +1,5 @@
 # This is installing the pgvector extension for postgres
-FROM postgres:latest
+FROM registry.gitlab.com/dalibo/postgresql_anonymizer:latest
 
 RUN apt-get update && apt-get install -y \
     build-essential \
