@@ -1,6 +1,6 @@
 FROM golang as base
 WORKDIR /go/src/supabase
-RUN git clone https://github.com/alchiweb/auth.git --depth 1 --branch v2.159.1
+RUN git clone https://github.com/alchiweb/auth.git
 WORKDIR /go/src/supabase/auth
 COPY docker/gotrue.patch .
 RUN git apply gotrue.patch
