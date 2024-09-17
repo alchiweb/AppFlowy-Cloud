@@ -34,7 +34,7 @@ services:
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-password}
       - POSTGRES_HOST=${POSTGRES_HOST:-postgres}
       - POSTGRES_PORT=${POSTGRES_PORT:-5432}
-      - PGDATA: /var/lib/postgresql/data/data/
+      - PGDATA=/var/lib/postgresql/data/data/
     volumes:
       - ./migrations/before:/docker-entrypoint-initdb.d
       - postgres_data:/var/lib/postgresql/data
